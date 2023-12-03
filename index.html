@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Example</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <ul class="fruits-animals">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+      </ul>
+
+      <ul class="places">
+        <li>New York</li>
+        <li>Paris</li>
+        <li>Tokyo</li>
+        <li>London</li>
+      </ul>
+
+      <ul class="fruits-animals">
+        <li>Lion</li>
+        <li>Elephant</li>
+        <li>Tiger</li>
+        <li>Giraffe</li>
+      </ul>
+    </div>
+
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        var listOneAndThree = document.querySelectorAll(".fruits-animals");
+
+        for (var i = 0; i < listOneAndThree.length; i++) {
+          listOneAndThree[i].style.backgroundColor = "gold";
+
+          var listOneAndThreeItems = listOneAndThree[i].children;
+          for (var j = 0; j < listOneAndThreeItems.length; j++) {
+            listOneAndThreeItems[j].style.color = "white";
+          }
+        }
+
+        var listTwo = document.querySelector(".places");
+        listTwo.style.backgroundColor = "grey";
+
+        var listTwoItems = listTwo.children;
+        for (var k = 0; k < listTwoItems.length; k++) {
+          listTwoItems[i].style.color = "black";
+        }
+      });
+    </script>
+  </body>
+</html>
